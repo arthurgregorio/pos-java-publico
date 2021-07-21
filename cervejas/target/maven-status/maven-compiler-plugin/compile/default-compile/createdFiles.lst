@@ -1,0 +1,5 @@
+br\eti\arthurgregorio\cervejada\Application.class
+br\eti\arthurgregorio\cervejada\dados\BeerService.class
+br\eti\arthurgregorio\cervejada\dados\Beer.class
+br\eti\arthurgregorio\cervejada\dados\BeerReader$1.class
+br\eti\arthurgregorio\cervejada\dados\BeerReader.class
