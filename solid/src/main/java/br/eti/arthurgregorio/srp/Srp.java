@@ -12,6 +12,7 @@ public class Srp {
     private void executar() {
 
         final List<Colaborador> colaboradores = List.of(
+                new Colaborador("Tio Patinhas", Cargo.CEO, 5000),
                 new Colaborador("Huguinho", Cargo.DESENVOLVEDOR, 500),
                 new Colaborador("Zezinho", Cargo.ANALISTA, 1000),
                 new Colaborador("Luizinho", Cargo.GERENTE, 2000)
