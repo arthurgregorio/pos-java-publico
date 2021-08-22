@@ -12,7 +12,7 @@ public class Isp {
     private void executa() {
 
         final var analista = new Analista("Jose", "123", 1000);
-        final var vendedor = new Analista("Manuel", "321", 1000);
+        final var vendedor = new Vendedor("Manuel", "321", 1500);
 
         final List<Colaborador> colaboradores = List.of(analista, vendedor);
 
