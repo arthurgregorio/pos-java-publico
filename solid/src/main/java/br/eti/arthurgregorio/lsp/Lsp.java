@@ -1,6 +1,5 @@
 package br.eti.arthurgregorio.lsp;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class Lsp {
@@ -12,11 +11,16 @@ public class Lsp {
 
     private void executa() {
 
-        final List<Conta> contas = Arrays.asList(
-                new Conta(),
-                new ContaPremium()
-        );
+        final var conta1 = new Conta();
+        final var conta2 = new ContaPremium();
 
-        contas.forEach(Conta::render);
+        conta1.depositar(100);
+        conta2.depositar(100);
+
+        final List<Conta> contas = List.of(conta1, conta2);
+
+        contas.stream()
+                .peek(Conta::render)
+                .forEach(conta -> System.out.println("Saldo da conta " + conta.getSaldo()));
     }
 }
