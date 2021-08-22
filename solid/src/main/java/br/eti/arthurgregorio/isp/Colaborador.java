@@ -12,8 +12,6 @@ public abstract class Colaborador {
         this.salario = salario;
     }
 
-    abstract double getComissao();
-
     public String getNome() {
         return nome;
     }

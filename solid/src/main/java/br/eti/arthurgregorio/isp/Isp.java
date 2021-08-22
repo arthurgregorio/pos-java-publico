@@ -11,14 +11,14 @@ public class Isp {
 
     private void executa() {
 
-        final var analista = new Analista("Jose", "123", 1000);
-        final var vendedor = new Vendedor("Manuel", "321", 1500);
-        final var vendedor2 = new Vendedor("Juca", "999", 1700);
-        final var cozinheira = new Cozinheira("Maria", "456", 2500);
+        final var manuel = new Vendedor("Manuel", "321", 1500);
+        final var juca = new Vendedor("Juca", "999", 1700);
 
-        final List<Colaborador> colaboradores = List.of(analista, vendedor, cozinheira, vendedor2);
+        final var jose = new Analista("Jose", "123", 1000);
+        final var maria = new Cozinheira("Maria", "456", 2500);
 
-        colaboradores.forEach(colaborador -> System.out.printf("A comissão de %s é de %s",
-                colaborador.getNome(), colaborador.getComissao()).println());
+        final List<Comissionavel> colaboradores = List.of(manuel, juca);
+
+        colaboradores.forEach(colaborador -> System.out.printf("A comissão é de %s", colaborador.getComissao()).println());
     }
 }
