@@ -12,13 +12,14 @@ public class OcpDip {
     private void executa() {
         
         final List<Item> itens = List.of(
-                new Item("Arroz", 10, 3d),
-                new Item("Feijao", 7, 5d),
-                new Item("Tomate", 50, 1.89),
-                new Item("Cerveja", 6, 5.99)
+                new Item("CPU Ryzen 5 5600x", 1, 325),
+                new Item("MB Asus TUF X570-Plus", 1, 165),
+                new Item("Mem DDR4 HyperX Fury 16GB", 2, 189),
+                new Item("VGA GeForce RTX 3060Ti", 1, 499),
+                new Item("SSD Samsung 980 Pro NVMe 500GB", 2, 100)
         );
         
-        final Venda venda = new Venda("Foz", "Juvenal", "PF", itens);
+        final Venda venda = new Venda("Nerd", "PF", "Paraná", itens);
         
         final Caixa caixa = new Caixa();
         
