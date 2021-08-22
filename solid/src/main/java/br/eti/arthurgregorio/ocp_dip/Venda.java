@@ -10,7 +10,7 @@ import java.util.List;
 public class Venda {
 
     private final String cliente;
-    private final String tipoCliente;
+    private final TipoCliente tipoCliente;
     private final String estadoEntrega;
 
     private final List<Item> itens;
@@ -18,7 +18,7 @@ public class Venda {
     private double frete;
     private double desconto;
 
-    public Venda(String cliente, String tipoCliente, String estadoEntrega, List<Item> itens) {
+    public Venda(String cliente, TipoCliente tipoCliente, String estadoEntrega, List<Item> itens) {
         this.cliente = cliente;
         this.tipoCliente = tipoCliente;
         this.estadoEntrega = estadoEntrega;
@@ -35,7 +35,7 @@ public class Venda {
         return cliente;
     }
 
-    public String getTipoCliente() {
+    public TipoCliente getTipoCliente() {
         return tipoCliente;
     }
 
