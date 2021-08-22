@@ -11,17 +11,17 @@ public class Venda {
 
     private final String cliente;
     private final String tipoCliente;
-    private final String enderecoEntrega;
+    private final String estadoEntrega;
 
     private final List<Item> itens;
 
     private double frete;
     private double desconto;
 
-    public Venda(String cliente, String tipoCliente, String enderecoEntrega, List<Item> itens) {
+    public Venda(String cliente, String tipoCliente, String estadoEntrega, List<Item> itens) {
         this.cliente = cliente;
         this.tipoCliente = tipoCliente;
-        this.enderecoEntrega = enderecoEntrega;
+        this.estadoEntrega = estadoEntrega;
         this.itens = itens;
     }
 
@@ -39,8 +39,8 @@ public class Venda {
         return tipoCliente;
     }
 
-    public String getEnderecoEntrega() {
-        return enderecoEntrega;
+    public String getEstadoEntrega() {
+        return estadoEntrega;
     }
 
     public List<Item> getItens() {

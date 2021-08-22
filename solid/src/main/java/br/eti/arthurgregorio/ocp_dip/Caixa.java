@@ -15,8 +15,8 @@ public class Caixa {
     public Venda faturar(Venda venda) {
         
         // verifica o calculo do frete
-        if (venda.getEnderecoEntrega().toLowerCase().equals("foz")) {
-            venda.setFrete(30);
+        if (venda.getEstadoEntrega().equalsIgnoreCase("Parana")) {
+            venda.setFrete(25);
         } else {
             venda.setFrete(50);
         }
