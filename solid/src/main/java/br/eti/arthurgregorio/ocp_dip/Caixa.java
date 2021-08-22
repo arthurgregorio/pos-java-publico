@@ -16,14 +16,14 @@ public class Caixa {
         
         // verifica o calculo do frete
         if (venda.getEstadoEntrega().equalsIgnoreCase("Parana")) {
-            venda.setFrete(25);
+            venda.setFrete(10);
         } else {
-            venda.setFrete(50);
+            venda.setFrete(30);
         }
         
         // verifica o calculo do desconto
         if (venda.getTipoCliente().equals("PF")) {
-            venda.setDesconto(venda.getValorTotal() * 0.10);
+            venda.setDesconto(venda.getValorTotal() * 0.1);
         } else if (venda.getTipoCliente().equals("PJ")) {
             venda.setDesconto(venda.getValorTotal() * 0.05);
         } else {
@@ -32,9 +32,9 @@ public class Caixa {
         
         System.out.println("Venda faturada!");
         
-        this.emissorNf.emitir();
-        this.correio.notificarFornecedor();
-        this.integraParaEstoque.integrar();
+        this.emissorNf.emitir(); // emite a nota fiscal
+        this.correio.notificarCliente(); // dispara um e-mail ao cliente
+        this.integraParaEstoque.integrar(); // da baixa nos items do estoque
         
         return venda;
     }
