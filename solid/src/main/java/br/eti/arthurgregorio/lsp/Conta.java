@@ -2,21 +2,25 @@ package br.eti.arthurgregorio.lsp;
 
 public class Conta {
 
-    protected double saldo;
+    protected final ManipuladorSaldo ManipuladorSaldo;
+
+    public Conta(ManipuladorSaldo ManipuladorSaldo) {
+        this.ManipuladorSaldo = ManipuladorSaldo;
+    }
 
     public double getSaldo() {
-        return saldo;
+        return this.ManipuladorSaldo.getSaldo();
     }
 
     public void depositar(double valor) {
-        this.saldo += valor;
+        this.ManipuladorSaldo.depositar(valor);
     }
 
     public void sacar(double valor) {
-        this.saldo -= valor;
+        this.ManipuladorSaldo.sacar(valor);
     }
 
     public void render() {
-        this.saldo += this.saldo * 0.05; // rende 5%
+        this.ManipuladorSaldo.render();
     }
 }
